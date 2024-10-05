@@ -1,7 +1,15 @@
 # todo: Преобразуйте переменную age и foo в число
 # age = "23"
 # foo = "23abc"
-#
+
+age = '23'
+foo = '23abc'
+age = int(age)
+foo = int(foo) # ValueError: invalid literal for int() with base 10: '23abc'
+# #foo невозможно преобразовать в число, потому что это значение переменной содержит буквы (нечисловые значения)?
+
+
+
 # Преобразуйте переменную age в Boolean
 # age = "123abc"
 #
