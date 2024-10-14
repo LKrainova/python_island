@@ -26,5 +26,38 @@ O  ▒  ▒  ▒  ▒  ▒  O  ▒
 
 
 
+# Задача ещё в доработке!:)
+
+#Todo: понять, как связать значения из двух списков между собой, чтобы выводилась и подсказка,
+# и заданное слово
+
+import random
+
+word_list = ['drak', 'unicorn', 'vasilisk']
+description_list = ['С чешуйками', 'С белой шёрсткой', 'С петушиным гребнем']
+
+answers_dictionary = dict(zip(word_list, description_list))
+
+word = random.choice(word_list)
+field = ['x'] * len(word)
+print(word)
+print(field)
+
+while 'x' in field:
+    letter = input('Введите букву, которая, как вы предполагаете, есть в слове: ')
+    for i in range(len(word)):
+        if letter == word[i]:
+            field[i] = letter
+            print('Отлично! Вы угадали букву!')
+            print(field)
+            break
+    else:
+        print('Такой буквы нет!')
+        print(field)
+
+else:
+    print('Вы угадали слово! Игра закончена!')
+
+
 
 
